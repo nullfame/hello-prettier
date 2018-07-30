@@ -4,6 +4,8 @@
   "description": "Prettier setup and demo",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write '**/*.{js,jsx}'",
+    "format-dryrun": "prettier '**/*.{js,jsx}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Adam Finlayson",
