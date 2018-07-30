@@ -4,12 +4,12 @@
   "description": "Prettier setup and demo",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write '**/*.{js,jsx}'",
-    "format-dryrun": "prettier '**/*.{js,jsx}'",
+    "format": "prettier --write '**/*.{js,jsx,json}'",
+    "format-dryrun": "prettier '**/*.{js,jsx,json}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.{js,jsx,json}": [
       "prettier --write",
       "git add"
     ]
