@@ -1,6 +1,7 @@
 # Example Prettier Project
 
-Prettier setup and demo
+* Demonstrates Prettier with .prettierrc to format JS,JSX,JSON
+* Uses Husky and lint-staged to automatically lint as a pre-commit hook
 
 
 
