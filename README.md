@@ -32,6 +32,18 @@ One of many possible ways to configure VSCode is to install the ESLint extension
 This will apply as many fixes as possible on save events.  Add `"files.autoSave": "onWindowChange"` for even more excitement.
 
 
+## References 
+
+Most of this was inspired by this post by Christopher Hamilton: 
+https://www.39digits.com/configure-prettier-and-eslint-in-visual-studio-code/
+
+He covers formatting on a pre-commit hook here:
+https://www.39digits.com/automatically-format-your-javascript-commits-using-prettier-and-husky/
+
+The only exception is my decision to NOT install the Prettier plugin for VSCode, which was inspired by Wes Bos:
+https://www.youtube.com/watch?v=YIvjKId9m2c
+
+
 ## License
 
 &copy; Northwestern University.  All rights reserved.
