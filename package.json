@@ -1,12 +1,40 @@
 {
   "name": "hello-prettier",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Prettier setup and demo",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write '**/*.{js,jsx,json}'",
+    "format-dryrun": "prettier '**/*.{js,jsx,json}'",
+    "lint": "eslint '**/*.{js,jsx}' --quiet",
+    "precommit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nullfame/hello-prettier.git"
+  },
+  "lint-staged": {
+    "*.{js,jsx,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "author": "Adam Finlayson",
   "license": "UNLICENSED",
-  "private": true
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/nullfame/hello-prettier/issues"
+  },
+  "homepage": "https://github.com/nullfame/hello-prettier",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.7"
+  }
 }
