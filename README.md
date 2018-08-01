@@ -4,6 +4,13 @@
 * Uses Husky and lint-staged to automatically lint and apply fixes as a pre-commit hook
 
 
+## Code Branches
+
+* [master](https://github.com/nullfame/hello-prettier/tree/master): code from the develop branch marked as a release
+* [develop](https://github.com/nullfame/hello-prettier/tree/develop): primary branch containing the basic setup
+  * [framework/vue](https://github.com/nullfame/hello-prettier/tree/framework/vue): branch of develop with Vue-specific configuration
+
+
 ## Setup and Usage
 
 * Run `npm install`
@@ -30,6 +37,18 @@ One of many possible ways to configure VSCode is to install the ESLint extension
 ```
 
 This will apply as many fixes as possible on save events.  Add `"files.autoSave": "onWindowChange"` for even more excitement.
+
+
+## References 
+
+Most of this was inspired by this post by Christopher Hamilton:<br>
+<https://www.39digits.com/configure-prettier-and-eslint-in-visual-studio-code/>
+
+He covers formatting on a pre-commit hook here:<br>
+<https://www.39digits.com/automatically-format-your-javascript-commits-using-prettier-and-husky/>
+
+The only exception is my decision to NOT install the Prettier plugin for VSCode, which was inspired by Wes Bos:<br>
+<https://www.youtube.com/watch?v=YIvjKId9m2c>
 
 
 ## License
