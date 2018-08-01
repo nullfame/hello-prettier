@@ -4,9 +4,9 @@
   "description": "Prettier setup and demo",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write '**/*.{js,jsx,json}'",
-    "format-dryrun": "prettier '**/*.{js,jsx,json}'",
-    "lint": "eslint '**/*.{js,jsx}' --quiet",
+    "format": "prettier --write '**/*.{js,json,jsx,vue}'",
+    "format-dryrun": "prettier '**/*.{js,json,jsx,vue}'",
+    "lint": "eslint '**/*.{js,jsx,vue}' --quiet",
     "precommit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +15,7 @@
     "url": "https://github.com/nullfame/hello-prettier.git"
   },
   "lint-staged": {
-    "*.{js,jsx,json}": [
+    "*.{js,json,jsx,vue}": [
       "prettier --write",
       "git add"
     ]
@@ -33,6 +33,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-vue": "^4.7.1",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.7"
