@@ -1,6 +1,6 @@
 # Example Prettier Project
 
-* Demonstrates Prettier with .prettierrc to format JS,JSX,JSON
+* Demonstrates Prettier with .prettierrc to format JS, JSX, JSON, **and Vue** (though, to be fair, version 3 of the Vue CLI _may_ render this branch unnecessary)
 * Uses Husky and lint-staged to automatically lint and apply fixes as a pre-commit hook
 
 
@@ -24,7 +24,8 @@ One of many possible ways to configure VSCode is to install the ESLint extension
     "eslint.alwaysShowStatus": true,
     "eslint.autoFixOnSave": true,
     "eslint.validate": [
-        "javascript"
+        "javascript",
+        "vue"
     ]
 }
 ```
@@ -42,6 +43,9 @@ He covers formatting on a pre-commit hook here:<br>
 
 The only exception is my decision to NOT install the Prettier plugin for VSCode, which was inspired by Wes Bos:<br>
 <https://www.youtube.com/watch?v=YIvjKId9m2c>
+
+Sebastian Weber wrote a Medium article about ESLint and Prettier with Vue:<br>
+<https://medium.com/@doppelmutzi/eslint-prettier-vue-workflow-46a3cf54332f>
 
 
 ## License
