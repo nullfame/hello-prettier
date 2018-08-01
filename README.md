@@ -4,6 +4,13 @@
 * Uses Husky and lint-staged to automatically lint and apply fixes as a pre-commit hook
 
 
+## Code Branches
+
+* [master](https://github.com/nullfame/hello-prettier/tree/master): code from the develop branch marked as a release
+* [develop](https://github.com/nullfame/hello-prettier/tree/develop): primary branch containing the basic setup
+  * [framework/vue](https://github.com/nullfame/hello-prettier/tree/framework/vue): branch of develop with Vue-specific configuration
+
+
 ## Setup and Usage
 
 * Run `npm install`
