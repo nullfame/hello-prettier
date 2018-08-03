@@ -45,6 +45,7 @@ This will apply as many fixes as possible on save events.  Add `"files.autoSave"
 
 * `format` and `lint` npm commands manually specify `exit 0` to not generate an NPM error when eslint exits with a code other than zero (because it detected an error in your code).  This is NOT done in the precommit hook because eslint exiting with an error is desired to prevent the commit
 * I was formatting JSON but decided that was too much.  Maybe with a ruleset specific to JSON
+* HTML formatting in VSCode isn't working at the moment.  Not entirely sure why that's the case.  Vetur's HTML formatter is currently disabled by default as it is "not actively maintained and has many long-standing bugs" so "will be removed soon."  Formatting on commit still works which leads me to believe I should be able to get this working in VSCode, I just can't.
 
 
 ## References 
