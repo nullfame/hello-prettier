@@ -1,6 +1,6 @@
 # Example Prettier Project
 
-* Demonstrates Prettier with .prettierrc to format JS, JSX, JSON, **and Vue** (though, to be fair, version 3 of the Vue CLI _may_ render this branch unnecessary)
+* Demonstrates Prettier with .prettierrc to format JS, JSX, **and Vue** (though, to be fair, version 3 of the Vue CLI _may_ render this branch unnecessary)
 * Uses Husky and lint-staged to automatically lint and apply fixes as a pre-commit hook
 
 
@@ -14,8 +14,9 @@
 ## Setup and Usage
 
 * Run `npm install`
-* Any time you commit changes, ESLint will automatically apply Prettier's fixes
-* `npm run lint` will display a list of errors (but not warnings) from both the airbnb-base (i.e., all their non-React rules) and Prettier rulesets but will NOT apply fixes
+* Any time you commit changes, ESLint will automatically apply Prettier's fixes.  If this fails (i.e., there is an "error" it cannot automatically fix) the commit will fail until a fix is manually applied.  Use `git commit --no-verify` if you have a good reason to commit without fixing an error and make it the next person's problem
+* `npm run lint` will display a list of errors from both the airbnb-base (i.e., all their non-React rules) and Prettier rulesets but will NOT apply fixes
+* `npm run format` will automatically fix all the errors it can (formatting and many recommendations), save those changes to disk, and display errors and warnings it cannot fix
 
 
 ## Configuring VSCode (optional)
@@ -38,6 +39,12 @@ One of many possible ways to configure VSCode is to install the ESLint extension
 ```
 
 This will apply as many fixes as possible on save events.  Add `"files.autoSave": "onWindowChange"` for even more excitement.
+
+
+## Notes
+
+* `format` and `lint` npm commands manually specify `exit 0` to not generate an NPM error when eslint exits with a code other than zero (because it detected an error in your code).  This is NOT done in the precommit hook because eslint exiting with an error is desired to prevent the commit
+* I was formatting JSON but decided that was too much.  Maybe with a ruleset specific to JSON
 
 
 ## References 
