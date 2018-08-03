@@ -4,9 +4,8 @@
   "description": "Prettier setup and demo",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write '**/*.{js,jsx,json}'",
-    "format-dryrun": "prettier '**/*.{js,jsx,json}'",
-    "lint": "eslint '**/*.{js,jsx}' --quiet",
+    "format": "eslint '**/*.{js,jsx}' --fix; exit 0",
+    "lint": "eslint '**/*.{js,jsx}'; exit 0",
     "precommit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,8 +14,8 @@
     "url": "https://github.com/nullfame/hello-prettier.git"
   },
   "lint-staged": {
-    "*.{js,jsx,json}": [
-      "prettier --write",
+    "*.{js,jsx}": [
+      "eslint --fix",
       "git add"
     ]
   },
