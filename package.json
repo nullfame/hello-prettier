@@ -1,6 +1,6 @@
 {
   "name": "hello-prettier",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Prettier setup and demo",
   "main": "index.js",
   "scripts": {
