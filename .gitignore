@@ -1,3 +1,6 @@
+# Don't store package-lock.json in example apps
+package-lock.json
+
 .DS_Store
 .env
 /.idea
